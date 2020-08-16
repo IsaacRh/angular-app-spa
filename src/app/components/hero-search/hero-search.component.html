@@ -1,0 +1,12 @@
+<h1>Searching: {{key}}</h1>
+<hr>
+<div class="row">
+    <div class="col-md-12" *ngIf="heroes.length  == 0">
+        <div class="alert alert-info" role="alert">
+            There are not results for the term: {{key}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-card-hero [heroe] = "hero" [index] = "i" *ngFor="let hero of heroes; let i = index;"></app-card-hero>
+</div>
